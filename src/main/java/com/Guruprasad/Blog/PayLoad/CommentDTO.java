@@ -1,5 +1,6 @@
 package com.Guruprasad.Blog.PayLoad;
 
+import jakarta.validation.constraints.Email;
 import lombok.Data;
 
 import jakarta.validation.constraints.NotEmpty;
@@ -12,8 +13,8 @@ public class CommentDTO {
     @NotEmpty
     @Size(min = 5 , max = 50 , message = "Please Enter Your Full name")
     private String name ;
-    @NotEmpty
-    @Size(min = 10 , message = "Please Enter the valid Email")
+    @NotEmpty(message = "Email should not be empty")
+    @Email
     private String email ;
     @NotEmpty
     @Size(min = 5 , max = 100 , message = "Comment body should atleast 5 Characters")
