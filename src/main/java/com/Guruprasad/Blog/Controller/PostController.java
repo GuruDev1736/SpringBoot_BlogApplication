@@ -73,5 +73,4 @@ public class PostController {
         List<PostDTO> postDTOS = postService.getpostbycategory(id);
         return new ResponseEntity<>(postDTOS,HttpStatus.OK);
     }
-
 }
